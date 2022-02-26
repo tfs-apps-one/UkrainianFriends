@@ -6,13 +6,221 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linearLayout21"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="match_parent"
+        app:backgroundTint="@null"
+        android:background="#5555FF"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout22"
+        android:orientation="vertical">
+
+        <!--
+        <ImageButton
+            android:id="@+id/btn_img_onoff"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="5"
+            android:background="@null"
+            android:onClick="onStartStop"
+            android:scaleType="fitCenter"
+
+Russian
+Ukrainian
+English
+French
+Italian
+German
+
+            tools:ignore="SpeakableTextPresentCheck" />
+        -->
+        <TextView
+            android:id="@+id/text_Ukrainian"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Я український друг"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_English"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="I am a ukrainian friend"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_French"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="je suis un ami ukrainien"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_Italian"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Sono un amico ucraino"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_German"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Ich bin ein ukrainischer Freund"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_Japanese"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="私はウクライナの友達です"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_Russian"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Я украинский друг"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout22"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="100dp"
+        app:backgroundTint="@null"
+        android:background="#FFFF55"
+        android:layout_alignParentStart="true"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout21"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_quiz4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="2"
+            app:backgroundTint="@null"
+            android:background="@drawable/bak_1"
+            android:src="@drawable/friends"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/text_friends"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="100 friends"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout23"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="30dp"
+        app:backgroundTint="@null"
+        android:background="#FFFF55"
+        android:layout_alignParentStart="true"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout22"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_support"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textColor="#CC5555"
+            android:textStyle="bold"
+            android:text="Let's share this screen on SNS"
+            />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
