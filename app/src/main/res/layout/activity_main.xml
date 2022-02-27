@@ -161,7 +161,7 @@ German
         android:layout_marginEnd="5dp"
         android:layout_height="100dp"
         app:backgroundTint="@null"
-        android:background="#FFFF55"
+        android:background="#FFFF66"
         android:layout_alignParentStart="true"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout21"
         android:orientation="horizontal">
@@ -172,25 +172,27 @@ German
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="0dp"
             android:layout_marginBottom="10dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             app:backgroundTint="@null"
             android:background="@drawable/bak_1"
             android:src="@drawable/friends"
+            android:onClick="onFriends"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/text_friends"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="0dp"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
             android:gravity="center"
             android:textStyle="bold"
+            android:textSize="16dp"
             android:textColor="@color/black"
             android:text="100 friends"
             />
@@ -202,7 +204,7 @@ German
         android:layout_marginEnd="5dp"
         android:layout_height="30dp"
         app:backgroundTint="@null"
-        android:background="#FFFF55"
+        android:background="#FFFF66"
         android:layout_alignParentStart="true"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout22"
         android:orientation="horizontal">
@@ -217,7 +219,7 @@ German
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
             android:gravity="center"
-            android:textColor="#CC5555"
+            android:textColor="#DD7777"
             android:textStyle="bold"
             android:text="Let's share this screen on SNS"
             />

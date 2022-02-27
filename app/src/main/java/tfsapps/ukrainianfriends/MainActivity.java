@@ -8,6 +8,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private MyOpenHelper helper;            //DBアクセス
     private int db_isopen = 0;              //DB使用したか
     private int db_friends = 0;             //DB友達数
+    final int MAX_FRIENDS = 999999999;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +26,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void setMainScreen(){
+        TextView result1 = (TextView) findViewById(R.id.text_friends);
+
+        if (db_friends >= MAX_FRIENDS){
+            result1.setText(""+"7,875,000,000"+"\nfriends\nThe world is all friends");
+        }
+        else{
+            result1.setText(""+db_friends+"\nfriends");
+        }
+    }
+
+
+    public void onFriends(View view){
+        int temp = db_friends;
+
+        temp *= 2;
+
+        if (temp <= MAX_FRIENDS){
+            db_friends = temp;
+        }
+        else{
+            db_friends = MAX_FRIENDS;
+        }
+
+        setMainScreen();
+    }
+
 
     /***************************************************
-     各種OS上の動作定義
+         各種OS上の動作定義
      ****************************************************/
     @Override
     public void onStart() {
@@ -35,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
         /* データベース */
         helper = new MyOpenHelper(this);
         AppDBInitRoad();
-
-        //CSVファイルの読込
-
+        setMainScreen();
     }
     @Override
     public void onResume() {
@@ -65,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /***************************************************
-     DB初期ロードおよび設定
+         DB初期ロードおよび設定
      ****************************************************/
     public void AppDBInitRoad() {
         SQLiteDatabase db = helper.getReadableDatabase();
@@ -104,18 +132,23 @@ public class MainActivity extends AppCompatActivity {
                 db.close();
             }
             db_isopen = 1;
+            db_friends = 1;
+            /*
             if (ret == -1) {
                 Toast.makeText(this, "DataBase Create.... ERROR", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "DataBase Create.... OK", Toast.LENGTH_SHORT).show();
             }
+             */
         } else {
+            /*
             Toast.makeText(this, "Data Loading...  friends:" + db_friends, Toast.LENGTH_SHORT).show();
+             */
         }
     }
 
     /***************************************************
-     DB更新
+         DB更新
      ****************************************************/
     public void AppDBUpdated() {
         SQLiteDatabase db = helper.getWritableDatabase();
@@ -128,14 +161,13 @@ public class MainActivity extends AppCompatActivity {
         } finally {
             db.close();
         }
+/*
         if (ret == -1) {
             Toast.makeText(this, "Saving.... ERROR ", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Saving.... OK "+ "friends= "+db_friends, Toast.LENGTH_SHORT).show();
         }
+
+ */
     }
-
-
-
-
 }
