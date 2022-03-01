@@ -221,7 +221,7 @@ German
             android:gravity="center"
             android:textColor="#DD7777"
             android:textStyle="bold"
-            android:text="Let's share this screen on SNS"
+            android:text="Share this message with your friends."
             />
     </LinearLayout>
 
