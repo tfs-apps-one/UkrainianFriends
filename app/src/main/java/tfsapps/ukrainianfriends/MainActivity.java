@@ -12,6 +12,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//広告
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+
+
 public class MainActivity extends AppCompatActivity {
 
     //  DB関連
@@ -19,11 +24,18 @@ public class MainActivity extends AppCompatActivity {
     private int db_isopen = 0;              //DB使用したか
     private int db_friends = 0;             //DB友達数
     final int MAX_FRIENDS = 999999999;
+    // 広告
+    private AdView mAdview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //  広告
+        mAdview = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
     }
 
     public void setMainScreen(){
