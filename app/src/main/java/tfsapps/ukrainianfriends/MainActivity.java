@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         /* データベース */
         helper = new MyOpenHelper(this);
         AppDBInitRoad();
+
+        db_friends = MAX_FRIENDS;
         setMainScreen();
     }
     @Override
